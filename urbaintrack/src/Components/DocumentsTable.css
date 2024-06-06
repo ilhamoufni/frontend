@@ -1,0 +1,34 @@
+/* DocumentsTable.css */
+.table-container {
+  overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+  overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+  max-height: 300px; /* Ajustez la hauteur maximale selon vos besoins */
+  margin-bottom: 20px; /* Espace en dessous du tableau */
+  float: left; /* Positionne le tableau à gauche de la page */
+}
+
+table {
+  width: auto; /* La largeur du tableau s'adapte au contenu */
+  border-collapse: collapse; /* Élimine l'espacement entre les cellules */
+  color: #A52A2A; /* Couleur de la police marron */
+}
+
+th, td {
+  padding: 8px; /* Ajoute un peu d'espace autour du contenu des cellules */
+  text-align: left; /* Alignement du texte à gauche */
+  border-bottom: 1px solid #ddd; /* Ligne de séparation entre les lignes */
+}
+
+th {
+  background-color: #ADD8E6; /* Couleur de fond bleu ciel pour les en-têtes de tableau */
+  position: sticky; /* Rend les en-têtes de tableau collants */
+  top: 0; /* Fixe les en-têtes en haut du tableau lors du défilement */
+  z-index: 10; /* Assure que les en-têtes restent au-dessus du contenu lors du défilement */
+}
+
+/* Style pour améliorer l'apparence du tableau sur les petits écrans */
+@media screen and (max-width: 600px) {
+  .table-container {
+    overflow-x: scroll; /* Permet le défilement horizontal sur les petits écrans */
+  }
+}
