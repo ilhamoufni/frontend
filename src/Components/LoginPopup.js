@@ -2,17 +2,34 @@ import "./LoginPopup.css";
 import React, { useState, useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useAuthContext } from "../auth/hooks/use-auth-context";
 
 const LoginPopup = ({ onLoginSuccess }) => {
+  const { login } = useAuthContext();
+
   const [isOpen, setIsOpen] = useState(false);
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("ilham.ou@gmail.com");
+  const [password, setPassword] = useState("ilham12");
   const [rememberMe, setRememberMe] = useState(false);
   const modalRef = useRef();
   const navigate = useNavigate();
 
   const [isSubmiting, setIsSubmiting] = useState(false);
 
+  const handleLogin = async () => {
+    try {
+      await login?.({
+        email: username,
+        password,
+      });
+
+      navigate("/documents");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  /*
   const handleLogin = () => {
     console.log('Connexion avec:',username, password);
     console.log('Mémoriser l\'identifiant:', rememberMe);
@@ -33,6 +50,7 @@ const LoginPopup = ({ onLoginSuccess }) => {
         setIsSubmiting(false);
       });
   };
+  */
 
   const handleClickOutside = (event) => {
     if (modalRef.current && !modalRef.current.contains(event.target)) {
