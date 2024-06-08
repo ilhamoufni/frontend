@@ -6,7 +6,11 @@ export default function DashboardLayout({ children }) {
 
   return (
     <>
-      <div>
+      <div
+        style={{
+          display: "flex",
+        }}
+      >
         <Sidebar user={user} />
 
         <div>{children}</div>
