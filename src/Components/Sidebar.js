@@ -8,8 +8,8 @@ const Sidebar = ({ user }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <img src={user.imageUrl} alt="Profil" className="sidebar-profile-image" />
-        <h3>{user.name}</h3>
+        <img src={user?.imageUrl} alt="Profil" className="sidebar-profile-image" />
+        <h3>{user?.name}</h3>
       </div>
       <nav className="sidebar-nav">
         <a href="/accueil" className="sidebar-nav-item component-rectangle">
