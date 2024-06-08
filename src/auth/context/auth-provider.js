@@ -85,6 +85,8 @@ export function AuthProvider({ children }) {
   const logout = useCallback(async () => {
     await axiosInstance.post("/logout");
 
+    setSession(null);
+
     dispatch({
       type: "LOGOUT",
     });

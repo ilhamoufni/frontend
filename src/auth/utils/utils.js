@@ -1,13 +1,13 @@
-import axios from "axios";
+import axiosInstance from "../../utils/axios";
 
 export const setSession = (accessToken) => {
   if (accessToken) {
     sessionStorage.setItem("accessToken", accessToken);
 
-    axios.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+    axiosInstance.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
   } else {
     sessionStorage.removeItem("accessToken");
 
-    delete axios.defaults.headers.common.Authorization;
+    delete axiosInstance.defaults.headers.common.Authorization;
   }
 };
