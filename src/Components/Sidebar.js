@@ -4,6 +4,7 @@ import img2 from "../images/accueil.png";
 import img3 from "../images/documents.png";
 import img4 from "../images/filtres.png";
 import img5 from "../images/eteindre.png";
+import img6 from "../images/eleve.png";
 import { useAuthContext } from "../auth/hooks/use-auth-context";
 import { useNavigate } from "react-router-dom";
 
@@ -24,11 +25,8 @@ const Sidebar = ({ user }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <img src={user?.imageUrl} alt="Profil" className="sidebar-profile-image" />
-
-        <img
-          src={user?.imageUrl}
-          alt="Profil"
+        <img alt=""
+          src={img6}
           className="sidebar-profile-image"
         />
 

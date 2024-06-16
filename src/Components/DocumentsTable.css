@@ -1,34 +1,35 @@
 /* DocumentsTable.css */
 .table-container {
-  width: calc(100vw - 250px); /* La largeur du tableau s'adapte au contenu */
-  overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
-  overflow-y: auto; /* Permet le défilement vertical si nécessaire */
-  margin-bottom: 20px; /* Espace en dessous du tableau */
-  float: left; /* Positionne le tableau à gauche de la page */
+  width: calc(100vw - 250px); 
+  overflow-x: auto; 
+  overflow-y: auto;
+  margin-bottom: 20px; 
+  float: left; 
 }
 
 table {
-  border-collapse: collapse; /* Élimine l'espacement entre les cellules */
-  color: #a52a2a; /* Couleur de la police marron */
+  border-collapse: collapse;
+  color: #0e0d0d; 
 }
 
 th,
 td {
-  padding: 8px; /* Ajoute un peu d'espace autour du contenu des cellules */
-  text-align: left; /* Alignement du texte à gauche */
-  border-bottom: 1px solid #ddd; /* Ligne de séparation entre les lignes */
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border: 1px solid black; 
+  padding: 8px; 
 }
 
 th {
-  background-color: #add8e6; /* Couleur de fond bleu ciel pour les en-têtes de tableau */
-  position: sticky; /* Rend les en-têtes de tableau collants */
-  top: 0; /* Fixe les en-têtes en haut du tableau lors du défilement */
-  z-index: 10; /* Assure que les en-têtes restent au-dessus du contenu lors du défilement */
+  background-color: #DFB868; 
+  position: sticky;
+  top: 0;
+  z-index: 10; 
 }
-
 /* Style pour améliorer l'apparence du tableau sur les petits écrans */
 @media screen and (max-width: 600px) {
   .table-container {
-    overflow-x: scroll; /* Permet le défilement horizontal sur les petits écrans */
+    overflow-x: scroll;
   }
 }

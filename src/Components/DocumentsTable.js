@@ -29,11 +29,11 @@ const DocumentsTable = () => {
             <th>Provinces</th>
             <th>Communes</th>
             <th>Centres</th>
-            <th>Intitule_de_documents</th>
+            <th>Intitulededocuments</th>
             <th>Responsables</th>
             <th>Collaborateurs</th>
             <th>Bet</th>
-            <th>Situations</th>
+            <th>Situation</th>
             <th>Observations</th>
             <th>Observations_chef_département</th>
             <th>Pièces_jointes</th>
@@ -46,11 +46,11 @@ const DocumentsTable = () => {
               <td>{doc.Provinces}</td>
               <td>{doc.Communes}</td>
               <td>{doc.Centres}</td>
-              <td>{doc.Intitule_de_documents}</td>
+              <td>{doc.Intitulededocument}</td>
               <td>{doc.Responsables}</td>
               <td>{doc.Collaborateurs}</td>
               <td>{doc.Bet}</td>
-              <td>{doc.Situations}</td>
+              <td>{doc.Situation}</td>
               <td>{doc.Observations}</td>
               <td>{doc.Observations_chef_département}</td>
 

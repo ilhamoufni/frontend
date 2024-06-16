@@ -23,7 +23,7 @@
 // }
 
 // export default App;
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Intro from "./Components/intro";
 import LoginPopup from "./Components/LoginPopup";
@@ -33,6 +33,7 @@ import AuthGuard from "./utils/auth-guard";
 import { AuthConsumer } from "./auth/context/auth-consumer";
 import GuestGuard from "./auth/context/guest-guard";
 import DashboardLayout from "./layouts/dashboard-layout";
+import MapComponent from "./Components/map";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,6 +53,16 @@ const router = createBrowserRouter([
       <DashboardLayout>
         <AuthGuard>
           <DocumentsTable />
+        </AuthGuard>
+      </DashboardLayout>
+    ),
+  },
+  {
+    path: "/map",
+    element: (
+      <DashboardLayout>
+        <AuthGuard>
+          <MapComponent /> 
         </AuthGuard>
       </DashboardLayout>
     ),
