@@ -1,14 +1,12 @@
 import React, { useCallback } from "react";
-import "./Sidebar.css";
 import img2 from "../images/accueil.png";
 import img3 from "../images/documents.png";
 import img4 from "../images/filtres.png";
 import img5 from "../images/eteindre.png";
-import img6 from "../images/eleve.png";
 import { useAuthContext } from "../auth/hooks/use-auth-context";
 import { useNavigate } from "react-router-dom";
 
-const Sidebar = ({ user }) => {
+export const Sidebar = ({ user }) => {
   const { logout } = useAuthContext();
 
   const navigate = useNavigate();
@@ -25,8 +23,8 @@ const Sidebar = ({ user }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-<img 
-          src ={user?.img6}
+        <img
+          src={user?.imageUrl}
           alt="Profil"
           className="sidebar-profile-image"
         />
@@ -51,16 +49,15 @@ const Sidebar = ({ user }) => {
           Filtre
         </a>
 
-        <button
+        <a
+          href="javascript:void(0)"
           className="sidebar-nav-item component-rectangle"
           onClick={handleLogout}
         >
           <img src={img5} alt="" className="component-icon" />
           Se déconnecter
-        </button>
+        </a>
       </nav>
     </div>
   );
 };
-
-export default Sidebar;
