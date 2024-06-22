@@ -25,6 +25,7 @@ const LoginPopup = ({ onLoginSuccess }) => {
 
       navigate("/documents");
     } catch (err) {
+      alert('Le mot de passe que vous avez entré est incorrect.');
       console.log(err);
     }
   };

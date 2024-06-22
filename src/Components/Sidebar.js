@@ -5,6 +5,7 @@ import img3 from "../images/documents.png";
 import img4 from "../images/filtres.png";
 import img5 from "../images/eteindre.png";
 import img6 from "../images/eleve.png";
+import img7 from "../images/map.png"
 import { useAuthContext } from "../auth/hooks/use-auth-context";
 import { useNavigate } from "react-router-dom";
 
@@ -25,8 +26,8 @@ const Sidebar = ({ user }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-<img 
-          src ={user?.img6}
+        <img 
+          src ={img6}
           alt="Profil"
           className="sidebar-profile-image"
         />
@@ -45,6 +46,10 @@ const Sidebar = ({ user }) => {
             Documents
           </a>
         )}
+        <a href="/map" className="sidebar-nav-item component-rectangle">
+          <img src={img7} alt="" className="component-icon" />
+          Carte de localisation
+        </a>
 
         <a href="/filtre" className="sidebar-nav-item component-rectangle">
           <img src={img4} alt="" className="component-icon" />

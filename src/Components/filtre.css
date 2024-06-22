@@ -1,0 +1,55 @@
+
+.filter-container {
+    display: flex;
+    padding: 20px;
+    background-color: #f5efde;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-section {
+    flex: 1;
+    margin-right: 40px;
+  }
+  
+  .filter-section:last-child {
+    margin-right: 0;
+  }
+  
+  .filter-section h3 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .filter-section h4 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .filter-section label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .filter-section input[type="radio"],
+  .filter-section select {
+    margin-right: 10px;
+  }
+  
+  .filter-section select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    box-sizing: border-box;
+    color: #333;
+  }
+  
+  .filter-section input[type="radio"] {
+    accent-color: #007bff;
+  }
+ 

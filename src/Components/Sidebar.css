@@ -1,14 +1,13 @@
-.sidebar {
-    width: 250px;
-    /* position: fixed; 
-    left: 0;
-    top: 0;
-    bottom: 0;
-    */
-    background-color: #f9f9f9;
-    padding: 20px;
+   .sidebar {
+    position: fixed; /* Fixe la position de la sidebar */
+    top: 0; /* Alignement en haut de la page */
+    left: 0; /* Alignement à gauche de la page */
+    width: 250px; /* Largeur de la sidebar */
+    height: 100%; /* Hauteur de la sidebar */
+    overflow-y: auto; /* Ajoute un défilement si le contenu est plus long que la fenêtre */
+    background-color: #f5f5f5;
+    
   }
-  
   .sidebar-header {
     display: flex;
     flex-direction: column;
